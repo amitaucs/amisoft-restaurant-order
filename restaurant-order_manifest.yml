@@ -1,0 +1,13 @@
+applications:
+- name: restaurant-order
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: ./target/order-1.0.0.jar
+  routes:
+  - route: restaurant-order.apps.pas-useast1.gcp-wipro.com
+  services:
+  - restaurant-order-db
+  - restaurant-queue
+  - restaurant-autoscale
+  stack: cflinuxfs3
