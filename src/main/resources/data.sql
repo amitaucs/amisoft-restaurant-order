@@ -1,0 +1,2 @@
+INSERT INTO USER (USERNAME, PASSWORD) VALUES ('amit', 'amitpassword');
+INSERT INTO USER (USERNAME, PASSWORD) VALUES ('digi', 'digipassword');
