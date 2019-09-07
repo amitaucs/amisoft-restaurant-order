@@ -36,9 +36,9 @@ public class OrderController {
         return null;
     }
 
-    @GetMapping("/getOrder")
-    public ResponseEntity<OrderResponse> getOrder(@RequestParam(value="consumerId") String consumerId) {
+    @GetMapping("/getOrders")
+    public ResponseEntity<OrderResponse> getOrder() {
 
-        return null;
+        return new ResponseEntity<>(new OrderResponse("From Order"),HttpStatus.OK);
     }
 }

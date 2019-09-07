@@ -39,7 +39,7 @@ public class ApplicationSecurityConfiguration extends WebSecurityConfigurerAdapt
         http.
                 csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/","/index","/css/*","/js/*","/*console/*").permitAll()
+                .antMatchers("/","/index","/css/*","/js/*","/*console/*","/swagger-ui.html").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .httpBasic();
