@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RefreshScope
 public class OrderController {
 
-    @Value("${message:Hello default}")
+    @Value("${order.message:Hello default}")
     private String message;
 
     @Autowired
