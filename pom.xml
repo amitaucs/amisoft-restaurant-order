@@ -25,6 +25,7 @@
 		<pivotal-version>2.1.4.RELEASE</pivotal-version>
 		<spring-cloud.version>Greenwich.SR2</spring-cloud.version>
 		<config-version>LATEST</config-version>
+		<spring-cloud-sleuth.version>2.1.2.RELEASE</spring-cloud-sleuth.version>
 	</properties>
 
 	<dependencies>
@@ -53,6 +54,17 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-sleuth</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-sleuth-zipkin</artifactId>
+			<version>LATEST</version>
 		</dependency>
 
 		<dependency>
@@ -150,7 +162,14 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		</dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-sleuth</artifactId>
+				<version>${spring-cloud-sleuth.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			</dependencies>
 	</dependencyManagement>
 
 	<build>
