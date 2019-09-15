@@ -47,12 +47,13 @@ public class OrderController {
     @GetMapping("/getOrder")
     public ResponseEntity<OrderResponse> getOrder(@RequestParam(value="consumerId") String consumerId) {
 
-        log.info("CustomerId is :"+consumerId);
+        log.info("Restaurant Order : CustomerId is :"+consumerId);
         return new ResponseEntity<>(new OrderResponse("From Order :"+message),HttpStatus.OK);
     }
 
     @GetMapping("/getAllOrders")
     public ResponseEntity<OrderResponse> getOrder(){
-        return new ResponseEntity<>(new OrderResponse("From Order :"+message),HttpStatus.OK);
+        log.info("Restaurant Order : From All Orders:");
+        return new ResponseEntity<>(new OrderResponse("Restaurant Order : From Order :"+message),HttpStatus.OK);
     }
 }
